@@ -11,7 +11,8 @@
     
     <h1 class="text-center">Negociações</h1>
     
-    <form class="form">
+    <!-- invocando o método adiciona para ele não submeter o form no click: -->
+    <form class="form" onsubmit="negociacaoController.adiciona(event)">
         
         <div class="form-group">
             <label for="data">Data</label>
@@ -59,11 +60,11 @@
         </tfoot>
     </table>
     <script src="js/app/models/Negociacao.js"></script>
+    <script src="js/app/controllers/NegociacaoController.js"></script>
     <script>
-    var n1 = new Negociacao(new Date(), 20, 30);
-    console.log(n1);
-    var volume = n1.obtemVolume();
-    console.log(volume);
+        //instanciando o controller:
+        let negociacaoController = new NegociacaoController();
     </script>
+    
 </body>
 </html>

@@ -4,7 +4,6 @@ var campos = [
     document.querySelector('#valor')
 ];
 
-console.log(campos);
 
 var tbody = document.querySelector('table tbody');
 
